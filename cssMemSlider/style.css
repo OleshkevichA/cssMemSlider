@@ -1,0 +1,233 @@
+body {
+  margin: 0em;
+  background-color: black;
+}
+
+.wrapper {
+  border-radius: 30px;
+  background-color: grey;
+  padding: 2em;
+  margin: 10em auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.container{
+  display: flex;
+  background-color: beige;
+  padding: 2em;
+  flex-direction: column;
+  overflow-x: hidden;
+  gap: 2em;
+  justify-content: center;
+  align-content: center;
+  width: 60em;
+}
+
+.container input {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  width: 400%;
+  border-radius: 10px;
+  margin-left: 6%;
+  gap: 10em;
+}
+
+.slides {
+  width: 100%;
+  height: 400px;
+}
+
+.slide1{
+  background-color: red;
+}
+.slide2{
+  background-color: rgb(4, 0, 255);
+}
+.slide3{
+  background-color: rgb(51, 255, 0);
+}
+.slide4{
+  background-color: rgb(255, 0, 85);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.controls label span {
+  transition: 0.5s;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 2px solid blue;
+  cursor: pointer;
+}
+
+.controls label {
+  padding: 2em 1em 1em;
+  line-height: 2em;
+  cursor: pointer;
+}
+
+.controls label:hover span {
+  transition: 0.5s;
+  background-color: red;
+}
+
+#slide1:checked ~ .controls label:nth-child(1) span,
+#slide2:checked ~ .controls label:nth-child(2) span,
+#slide3:checked ~ .controls label:nth-child(3) span,
+#slide4:checked ~ .controls label:nth-child(4) span
+{
+  transition: 2s;
+  background-color: #20b89e;
+}
+
+@keyframes animation-second {
+  0%{margin-left: 6%;
+    opacity: 0;}
+  20%{margin-left: -93%;
+    opacity: 0;}  
+  100% {margin-left: -98%;
+    opacity: 1;}
+}
+
+@keyframes animation-first {
+    0%{margin-left: 20%;
+      opacity: 0;}
+    20%{margin-left: 11%;
+      opacity: 0;}  
+    100% {margin-left: 6%;
+      opacity: 1;}
+}
+@keyframes animation-third {
+    0%{margin-left: -98%;
+      opacity: 0;}
+    20%{margin-left: -197%;
+      opacity: 0;}  
+    100% {margin-left: -202%;
+      opacity: 1;}
+}
+@keyframes animation-forth {
+  0%{margin-left: -202%;
+    opacity: 0;}
+  20%{margin-left: -301%;
+    opacity: 0;}  
+  100% {margin-left: -306%;
+    opacity: 1;}
+}
+
+
+
+#slide2:checked ~ .slider.animation-second {
+  animation-name: animation-second;
+  animation-duration: 1.5s;
+  margin-left: -98%;
+}
+#slide1:checked ~ .slider.animation-first {
+  animation-name: animation-first;
+  animation-duration: 1.5s;
+  margin-left: 6%;
+}
+
+#slide3:checked ~ .slider.animation-third {
+  animation-name: animation-third;
+  animation-duration: 1.5s;
+  margin-left: -202%;
+}
+
+#slide4:checked ~ .slider.animation-forth {
+  animation-name: animation-forth;
+  animation-duration: 1.5s;
+  margin-left: -306%;
+}
+
+.mem-content {
+  width: 400%;
+  display: flex;
+  overflow-x: hidden;
+  gap: 50em;
+  margin-left: 0%;
+}
+
+.mem-content p{
+  width: 5em;
+  font-size: 3em;
+  padding: 0em 0em;
+  text-align: left;
+}
+
+@keyframes mem-animation-second {
+  0%{margin-left: 6%;
+    opacity: 0;}
+  20%{margin-left: -70%;
+    opacity: 0.5;}  
+  100% {margin-left: -102%;
+    opacity: 1;}
+}
+
+#slide2:checked ~ .mem-content.mem-animation-second {
+  animation-name: mem-animation-second;
+  animation-duration: 1.5s;
+  margin-left: -102%;
+}
+@keyframes mem-animation-second {
+  0%{margin-left: 6%;
+    opacity: 0;}
+  10%{margin-left: -70%;
+    opacity: 0.5;}  
+  100% {margin-left: -102%;
+    opacity: 1;}
+}
+
+#slide1:checked ~ .mem-content.mem-animation-first {
+  animation-name: mem-animation-first;
+  animation-duration: 1.5s;
+  margin-left: 6%;
+}
+
+@keyframes mem-animation-first {
+  0%{margin-left: 60%;
+    opacity: 0;}
+  10%{margin-left: 38%;
+    opacity: 0.5;}  
+  100% {margin-left: 6%;
+    opacity: 1;}
+}
+
+#slide3:checked ~ .mem-content.mem-animation-third {
+  animation-name: mem-animation-third;
+  animation-duration: 1.5s;
+  margin-left: -210%;
+}
+
+@keyframes mem-animation-third {
+  0%{margin-left: -102%;
+    opacity: 0;}
+  10%{margin-left: -178%;
+    opacity: 0.5;}  
+  100% {margin-left: -210%;
+    opacity: 1;}
+}
+
+#slide4:checked ~ .mem-content.mem-animation-forth {
+  animation-name: mem-animation-forth;
+  animation-duration: 1.5s;
+  margin-left: -318%;
+}
+
+@keyframes mem-animation-forth {
+  0%{margin-left: -210%;
+    opacity: 0;}
+  10%{margin-left: -286%;
+    opacity: 0.5;}  
+  100% {margin-left: -318%;
+    opacity: 1;}
+}

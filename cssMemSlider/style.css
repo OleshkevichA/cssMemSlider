@@ -211,30 +211,30 @@ img{
 #slide3:checked ~ .content-container .mem-content.mem-animation-third {
   animation-name: mem-animation-third;
   animation-duration: 1.5s;
-  margin-left: -262%;
+  margin-left: -262.5%;
 }
 
 @keyframes mem-animation-third {
   0%{margin-left: -267%;
     opacity: 0;}
-  50%{margin-left: -262%;
+  50%{margin-left: -262.5%;
     opacity: 0.5;}  
-  100% {margin-left: -262%;
+  100% {margin-left: -262.5%;
     opacity: 1;}
 }
 
 #slide4:checked ~ .content-container .mem-content.mem-animation-forth {
   animation-name: mem-animation-forth;
   animation-duration: 1.5s;
-  margin-left: -394%;
+  margin-left: -393.5%;
 }
 
 @keyframes mem-animation-forth {
   0%{margin-left: -400%;
     opacity: 0;}
-  50%{margin-left: -394%;
+  50%{margin-left: -393.5%;
     opacity: 0.5;}  
-  100% {margin-left: -394%;
+  100% {margin-left: -393.5%;
     opacity: 1;}
 }
 

@@ -1,0 +1,311 @@
+body {
+  margin: 0em;
+  background-color: black;
+  padding: 2em;
+}
+
+.wrapper {
+  border-radius: 2%;
+  padding: 2em;
+  margin: 2em auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(62 163 33);
+}
+
+.container{
+  display: flex;
+  background-color: rgb(62 163 33);
+  padding: 2em 0;
+  flex-direction: column;
+  overflow-x: hidden;
+  gap: 2em;
+  justify-content: center;
+  align-content: center;
+}
+
+.container input {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  width: 400%;
+  border-radius: 1em;
+  margin-left: 0;
+  border-radius: 1%;
+}
+
+.slides {
+  border-radius: 1em;
+  width: 100vw;
+}
+
+img{
+ width: 100%;
+}
+
+
+.controls {
+  display: flex;
+  justify-content: right;
+  background-color: rgb(62 163 33);;
+}
+
+.controls label span {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: #000000;
+  border: 3px solid rgb(35, 245, 7);
+  cursor: pointer;
+  transition: 1s;
+}
+
+.controls label {
+  padding: 2em 1em 1em;
+  line-height: 2em;
+  cursor: pointer;
+}
+
+.controls label:hover span {
+  background-color: #dfdb07;
+  border: 3px solid #000000;
+  transition: 1s;
+}
+
+#slide1:checked ~ .content-container label:nth-child(1) span,
+#slide2:checked ~ .content-container label:nth-child(2) span,
+#slide3:checked ~ .content-container label:nth-child(3) span,
+#slide4:checked ~ .content-container label:nth-child(4) span
+{
+  transition: 1s;
+  border: 3px solid #dfdb07;
+  background-color: #000000;
+}
+
+#slide1:checked:hover ~ .content-container label:nth-child(1) span,
+#slide2:checked:hover ~ .content-container label:nth-child(2) span,
+#slide3:checked:hover ~ .content-container label:nth-child(3) span,
+#slide4:checked:hover ~ .content-container label:nth-child(4) span
+{
+  transition: 1s;
+  border: 3px solid #dfdb07;
+  background-color: #dfdb07;
+}
+
+@keyframes animation-second {
+  0%{margin-left: 0%;
+    opacity: 0;}
+  50%{margin-left: -100%;
+    opacity: 0.2;}  
+  100% {margin-left: -100%;
+    opacity: 1;}
+}
+
+@keyframes animation-first {
+    0%{margin-left: 50%;
+      opacity: 0;}
+    50%{margin-left: 0%;
+      opacity: 0.2;}  
+    100% {margin-left: 0%;
+      opacity: 1;}
+}
+@keyframes animation-third {
+    0%{margin-left: -100%;
+      opacity: 0;}
+    50%{margin-left: -200%;
+      opacity: 0.2;}  
+    100% {margin-left: -200%;
+      opacity: 1;}
+}
+@keyframes animation-forth {
+  0%{margin-left: -200%;
+    opacity: 0;}
+  50%{margin-left: -300%;
+    opacity: 0.2;}  
+  100% {margin-left: -300%;
+    opacity: 1;}
+}
+
+#slide2:checked ~ .slider.animation-second {
+  animation-name: animation-second;
+  animation-duration: 0.5s;
+  margin-left: -100%;
+}
+#slide1:checked ~ .slider.animation-first {
+  animation-name: animation-first;
+  animation-duration: 0.5s;
+  margin-left: 0%;
+}
+
+#slide3:checked ~ .slider.animation-third {
+  animation-name: animation-third;
+  animation-duration: 0.5s;
+  margin-left: -200%;
+}
+
+#slide4:checked ~ .slider.animation-forth {
+  animation-name: animation-forth;
+  animation-duration: 0.5s;
+  margin-left: -300%;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+}
+
+.mem-content {
+  width: 500%;
+  display: flex;
+  overflow-x: hidden;
+  margin-left: 0%;
+  flex-wrap: nowrap;
+  gap: 5%;
+}
+
+.mem-content p{
+  margin: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 2em;
+  padding: 0em 0em;
+  text-align: left;
+}
+
+@keyframes mem-animation-second {
+  0%{margin-left: -136%;
+    opacity: 0;}
+  50%{margin-left: -131%;
+    opacity: 0.5}  
+  100% {margin-left: -131%;
+    opacity: 1;}
+}
+
+#slide2:checked ~ .content-container .mem-content.mem-animation-second {
+  animation-name: mem-animation-second;
+  animation-duration: 1.5s;
+  margin-left: -131%;
+}
+
+
+#slide1:checked ~ .content-container .mem-content.mem-animation-first {
+  animation-name: mem-animation-first;
+  animation-duration: 1.5s;
+  margin-left: 0%;
+}
+
+@keyframes mem-animation-first {
+  0%{margin-left: -5%;
+    opacity: 0;}
+  50%{margin-left: 0%;
+    opacity: 0.5;}  
+  100% {margin-left: 0%;
+    opacity: 1;}
+}
+
+#slide3:checked ~ .content-container .mem-content.mem-animation-third {
+  animation-name: mem-animation-third;
+  animation-duration: 1.5s;
+  margin-left: -262.5%;
+}
+
+@keyframes mem-animation-third {
+  0%{margin-left: -267%;
+    opacity: 0;}
+  50%{margin-left: -262.5%;
+    opacity: 0.5;}  
+  100% {margin-left: -262.5%;
+    opacity: 1;}
+}
+
+#slide4:checked ~ .content-container .mem-content.mem-animation-forth {
+  animation-name: mem-animation-forth;
+  animation-duration: 1.5s;
+  margin-left: -393.5%;
+}
+
+@keyframes mem-animation-forth {
+  0%{margin-left: -400%;
+    opacity: 0;}
+  50%{margin-left: -393.5%;
+    opacity: 0.5;}  
+  100% {margin-left: -393.5%;
+    opacity: 1;}
+}
+
+@media (max-width: 1023px){
+  .content-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .mem-content {
+    width: 400%;
+  }
+
+  @keyframes mem-animation-second {
+    0%{margin-left: 85%;
+      opacity: 0;}
+    50%{margin-left: 90%;
+      opacity: 0.5}  
+    100% {margin-left: 90%;
+      opacity: 1;}
+  }
+  
+  #slide2:checked ~ .content-container .mem-content.mem-animation-second {
+    animation-name: mem-animation-second;
+    animation-duration: 1.5s;
+    margin-left: 90%;
+  }
+  
+  
+  #slide1:checked ~ .content-container .mem-content.mem-animation-first {
+    animation-name: mem-animation-first;
+    animation-duration: 1.5s;
+    margin-left: 300%;
+  }
+  
+  @keyframes mem-animation-first {
+    0%{margin-left: 295%;
+      opacity: 0;}
+    50%{margin-left: 300%;
+      opacity: 0.5;}  
+    100% {margin-left: 300%;
+      opacity: 1;}
+  }
+  
+  #slide3:checked ~ .content-container .mem-content.mem-animation-third {
+    animation-name: mem-animation-third;
+    animation-duration: 1.5s;
+    margin-left: -120%;
+  }
+  
+  @keyframes mem-animation-third {
+    0%{margin-left: -125%;
+      opacity: 0;}
+    50%{margin-left: -120%;
+      opacity: 0.5;}  
+    100% {margin-left: -120%;
+      opacity: 1;}
+  }
+  
+  #slide4:checked ~ .content-container .mem-content.mem-animation-forth {
+    animation-name: mem-animation-forth;
+    animation-duration: 1.5s;
+    margin-left: -330%;
+  }
+  
+  @keyframes mem-animation-forth {
+    0%{margin-left: -335%;
+      opacity: 0;}
+    50%{margin-left: -330%;
+      opacity: 0.5;}  
+    100% {margin-left: -330%;
+      opacity: 1;}
+  }
+}
